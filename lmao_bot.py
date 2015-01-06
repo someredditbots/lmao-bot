@@ -4,12 +4,12 @@ import sys
 import datetime
 import random
 
-def login():
+def login(username=user, password=passwd):
 	r.login(username, password)
 
 r = praw.Reddit('lmao-bot by /u/Xwerve and /u/liquidized')
-username = accounts.lmao_bot_user
-password = accounts.lmao_bot_pass
+user = accounts.lmao_bot_user
+passwd = accounts.lmao_bot_pass
 login()
 
 key_phrase_list = ['ay', 'ayy', 'ayyy', 'ayyyy', 'ayyyyy', 'ayyyyyy', 'ayyyyyyyy', 'ayyyyyyyyy', 'ayyyyyyyyyy', ' ay', 'ay ', 'ayy ', ' ayy']
