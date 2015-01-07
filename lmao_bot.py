@@ -4,13 +4,13 @@ import sys
 import datetime
 import random
 
-def login(username=user, password=passwd):
+def login(username, password):
 	r.login(username, password)
 
 r = praw.Reddit('lmao-bot by /u/Xwerve and /u/liquidized')
 user = accounts.lmao_bot_user
 passwd = accounts.lmao_bot_pass
-login()
+login(user, passwd)
 
 key_phrase_list = ['ay', 'ayy', 'ayyy', 'ayyyy', 'ayyyyy', 'ayyyyyy', 'ayyyyyyyy', 'ayyyyyyyyy', 'ayyyyyyyyyy', ' ay', 'ay ', 'ayy ', ' ayy']
 the_phrase_list = ['ayy lmao', 'ayylmao', 'ayy lamo']
@@ -20,7 +20,7 @@ banned_subreddits_list = 	['askreddit', 'teenagers', 'nfl', 'pcmasterrace', 'glo
 					      	'suicidewatch', 'depression', 'whowouldwin', 'dota2', 'mildlyinteresting', 'me_irl', 'csgobetting',
 					      	'ayylmao', 'nba', 'circlejerk', 'csgolounge']
 ok_subs = 'all'
-banned_responders_list = [username, 'ayy_lmao_bot', 'AutoModerator']
+banned_responders_list = [user, 'ayy_lmao_bot', 'AutoModerator']
 
 # uses dictionaries because they are faster to search through
 banned_responders = dict(zip(banned_responders_list, empty))
